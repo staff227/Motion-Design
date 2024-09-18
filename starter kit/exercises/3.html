@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+    <title>Button Transition</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+}
+
+li {
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  padding: 20px 0px 20px 0;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 15px 23px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #6E32EF;
+  transition-property: background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transition-property: color;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
+
+}
+
+
+.btn:hover{
+    background-color: #fad3a1;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div><img src="../images/logo-l4.svg" alt="logo" class="logo"></div>
+        <div class="nav-right">
+            <ul class="list-container">
+                <li class="list">Work</li>
+                <li class="list">Company</li>
+                <li class="list">Blog</li>
+                <li class="list">Career</li>
+                <li class="list">Contact</li>
+            </ul>
+            <div><button class="btn">Get a Quote</button></div>
+        </div>
+        
+    </nav>
+</body>
+</html>

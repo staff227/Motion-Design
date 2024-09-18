@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>DropDown Transition</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+}
+
+.background {
+  background-color: #151618;
+  height: 50vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  margin-right: 50px;
+  color: #a1a2a3;
+  transition: all .4s ease-in-out;
+}
+
+.list:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.services {
+  position: relative;
+  color: #a1a2a3;
+  display: flex;
+}
+.services::after {
+  content: url("../icons/icon-arrow-down.svg");
+  opacity: 0.6;
+  height: 25px;
+}
+.services:hover::after{
+  opacity: 1;
+}
+
+.drop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #212224;
+  color: #a1a2a3;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 300px;
+}
+
+.drop li {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop li::after{
+  
+}
+
+.drop li:hover{
+  background-color: #2C2D2F;
+  color: #ffffff;
+  padding-left: 20px;
+}
+.drop li:hover::after{
+  content: url("../icons/icon-arrow-right.svg");
+}
+
+.btn {
+  padding: 15px 23px;
+  border-radius: 20px;
+  border: none;
+  color: #6e32ef;;
+  background-color: transparent;
+  border: 1px solid #6e32ef;
+  transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: black;
+  border-color: #a1a2a3;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <nav class="nav-container">
+        <div><img src="../images/logo-l5.svg" alt="logo" class="logo" /></div>
+        <ul class="list-container">
+          <li class="list services">
+            Services
+            <ul class="drop">
+              <li>Branding</li>
+              <li>Web design</li>
+              <li>Web Development</li>
+              <li>eCommerce</li>
+              <li>Print</li>
+            </ul>
+          </li>
+          <li class="list">Company</li>
+          <li class="list">Blog</li>
+          <li class="list">Career</li>
+          <li class="list">Contact</li>
+        </ul>
+
+        <div><button class="btn">Get a Quote</button></div>
+      </nav>
+    </div>
+  </body>
+</html>
