@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>DropDown Transition</title>
+    <title>DropDownd Transition</title>
     <style>
         * {
   box-sizing: border-box;
@@ -45,6 +45,7 @@ ul {
   margin-right: 50px;
   color: #a1a2a3;
   transition: all .4s ease-in-out;
+  padding: 5px;
 }
 
 .list:hover {
@@ -56,6 +57,7 @@ ul {
   position: relative;
   color: #a1a2a3;
   display: flex;
+
 }
 .services::after {
   content: url("../icons/icon-arrow-down.svg");
@@ -64,7 +66,9 @@ ul {
 }
 .services:hover::after{
   opacity: 1;
+  
 }
+
 
 .drop {
   position: absolute;
@@ -77,7 +81,17 @@ ul {
   border-radius: 10px;
   margin-top: 30px;
   width: 300px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-40px);
+  transition: transform .4s ease-in-out, visibility .5s ease-in-out, opacity .5s ease-in-out;
 }
+.services:hover .drop{
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .drop li {
   padding: 10px;
@@ -94,6 +108,7 @@ ul {
   background-color: #2C2D2F;
   color: #ffffff;
   padding-left: 20px;
+  opacity: 1;
 }
 .drop li:hover::after{
   content: url("../icons/icon-arrow-right.svg");
