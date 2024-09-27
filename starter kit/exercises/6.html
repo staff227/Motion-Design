@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Accordion</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="6.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="background"></div>
+      <nav>
+        <a href="#"><img src="../images/logo-nomad.svg" alt="logo" /></a>
+        <ul>
+          <li>Destination</li>
+          <li>Travel Styles</li>
+          <li>Stories</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <header>
+        <h2>Explore Weather Forecasts</h2>
+        <h1>New York City</h1>
+      </header>
+      <div class="accordion-container">
+        <div class="accordion">
+          <div class="top" onclick="toggleAccordion()">
+            <p>Mon</p>
+            <p>11 Apr</p>
+          </div>
+          <img src="../images/cloudy.jpg" class="acc-img" alt="cloudy" />
+          <div class="bottom">
+            <p>19°</p>
+            <p>26°</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="top" onclick="toggleAccordion()">
+            <p>Tue</p>
+            <p>12 Apr</p>
+          </div>
+          <img src="../images/sunny.jpg" class="acc-img" alt="sunny" />
+          <div class="bottom">
+            <p>27°</p>
+            <p>32°</p>
+          </div>
+        </div>
+
+        <div class="accordion opened">
+          <div class="top" onclick="toggleAccordion()">
+            <p>Wed</p>
+            <p>13 Apr</p>
+          </div>
+          <img src="../images/rainy.jpg" class="acc-img" alt="rainy" />
+          <div class="bottom">
+            <p>10°</p>
+            <p>15°</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="top" onclick="toggleAccordion()">
+            <p>Thu</p>
+            <p>14 Apr</p>
+          </div>
+          <img src="../images/cloudy.jpg" class="acc-img" alt="cloudy" />
+          <div class="bottom">
+            <p>19°</p>
+            <p>26°</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="top" onclick="toggleAccordion()">
+            <p>Fri</p>
+            <p>15 Apr</p>
+          </div>
+          <img src="../images/thunder.jpg" class="acc-img" alt="thunder" />
+          <div class="bottom">
+            <p>11°</p>
+            <p>17°</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      
+    </script>
+  </body>
+</html>

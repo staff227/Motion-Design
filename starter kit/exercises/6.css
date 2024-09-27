@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.container {
+  position: relative;
+  color: white;
+}
+.background {
+  background: #111111;
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+
+  z-index: -5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px 50px 80px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 0.8rem;
+}
+
+header {
+  margin: 90px 0 90px 0;
+  text-align: center;
+}
+header h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 10px;
+}
+header h1 {
+  font-size: 3rem;
+}
+
+.accordion-container{
+  display: flex;
+  border: 1px solid rgb(255, 238, 0);
+  height: 55vh;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 15px;
+}
+.accordion{
+  border: 1px solid blue;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.opened{
+    flex-basis: 500px;
+}
+
+.top{
+    padding: 40px 25px 40px 25px;
+    background: #111111;
+}
+.top :nth-child(2){
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+.acc-img{
+    position: absolute;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bottom{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    font-weight: 600;
+    background: #111111;
+    padding: 40px 25px 40px 25px;
+}
+.bottom :nth-child(1){
+}
