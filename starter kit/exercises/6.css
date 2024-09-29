@@ -46,50 +46,147 @@ header h1 {
   font-size: 3rem;
 }
 
-.accordion-container{
+.accordion-container {
   display: flex;
-  border: 1px solid rgb(255, 238, 0);
   height: 55vh;
   justify-content: center;
   margin-top: 40px;
   gap: 15px;
 }
-.accordion{
-  border: 1px solid blue;
+.accordion {
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 20px;
+  border-radius: 30px;
+  flex-basis: 150px;
 }
 
-.opened{
-    flex-basis: 500px;
+
+.opened {
+  flex-basis: 500px;
 }
 
-.top{
-    padding: 40px 25px 40px 25px;
-    background: #111111;
+.upper {
+  padding: 40px 0px 40px 0px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.671);
+  backdrop-filter: blur(10px);
+  color: white;
 }
-.top :nth-child(2){
-    font-size: 0.8rem;
-    margin-top: 10px;
+.upper :nth-child(2) {
+  font-size: 0.8rem;
+  margin-top: 10px;
 }
-.acc-img{
-    position: absolute;
-    z-index: -5;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.upper.is-opened {
+  padding-left: 25px;
+  font-weight: 700;
+  text-align: left;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
 }
-.bottom{
-    display: flex;
-    justify-content: start;
-    gap: 10px;
-    font-weight: 600;
-    background: #111111;
-    padding: 40px 25px 40px 25px;
+.acc-img {
+  position: absolute;
+  z-index: -5;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-.bottom :nth-child(1){
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  padding: 40px 0px 40px 0px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.671);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+.bottom.is-opened {
+  flex-direction: column;
+  gap: 70px;
+  padding: 10px 25px 25px 25px;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.temp {
+  display: flex;
+  gap: 5px;
+}
+
+.bottom.is-opened .temp {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  font-size: 2.3rem;
+}
+
+.bottom.is-opened .temp :nth-child(2) {
+  color: rgb(230, 226, 226);
+  font-size: 2rem;
+}
+
+.is-opened {
+  background: transparent;
+}
+
+.weather {
+  font-size: 2.5rem;
+  padding: 40px 25px 15px 25px;
+}
+
+.footer-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.wind,
+.humidity,
+.rain {
+  padding: 20px 0px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 10px;
+}
+
+.wind img,
+.humidity img,
+.rain img {
+  margin-bottom: 5px;
+}
+.wind :nth-child(2),
+.humidity :nth-child(2),
+.rain :nth-child(2) {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}
+.wind :nth-child(3),
+.humidity :nth-child(3),
+.rain :nth-child(3) {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: none;
+}
+.weather {
+  display: none;
+}
+
+.bottom :nth-child(1) {
 }
