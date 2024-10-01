@@ -35,7 +35,7 @@ accordion.forEach((item, i) => {
     bottom[i].classList.add("is-opened");
     upper[i].classList.add("is-opened");
     weather[i].style.display = "inline";
-    footer[i].style.display = "grid";
+    footer[i].style.display = "flex";
     weather[i].style.transition = "opacity 2s ease-in-out";
     footer[i].style.transition = "opacity 2s ease-in-out";
     weather[i].style.opacity = "1";

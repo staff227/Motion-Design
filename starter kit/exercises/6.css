@@ -50,12 +50,13 @@ header h1 {
   display: flex;
   height: 55vh;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
   gap: 15px;
+  border: 1px solid #ccc;
 }
 .accordion {
   position: relative;
-  overflow: hidden;
+  overflow:hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -99,6 +100,7 @@ header h1 {
 }
 .bottom {
   display: flex;
+  align-items: end;
   justify-content: center;
   gap: 10px;
   font-weight: 600;
@@ -111,23 +113,29 @@ header h1 {
 }
 .bottom.is-opened {
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 70px;
   padding: 10px 25px 25px 25px;
   background: none;
   backdrop-filter: none;
   box-shadow: none;
+  height: 100%;
 }
 
 .temp {
   display: flex;
   gap: 5px;
+  align-items: end;
 }
 
 .bottom.is-opened .temp {
   display: flex;
-  align-items: end;
+  align-items:flex-start;
+  justify-content: flex-start;
   gap: 10px;
   font-size: 2.3rem;
+  width: 100%;
 }
 
 .bottom.is-opened .temp :nth-child(2) {
@@ -147,9 +155,9 @@ header h1 {
 
 .footer-container {
   display: none;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+  width: 100%;
+
 }
 
 .wind,
@@ -164,7 +172,7 @@ header h1 {
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   border-radius: 10px;
-  
+  flex: 1;
 }
 
 .wind img,
